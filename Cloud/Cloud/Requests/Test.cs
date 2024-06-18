@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cloud.Requests
 {
+    /**
+     * <summary>
+     * Debuggerski kontroler nie używany w aplikacji <c>produkcyjnie</c>.
+     * </summary>
+     */
     class Test
     {
         public static Response Exec (Request request)

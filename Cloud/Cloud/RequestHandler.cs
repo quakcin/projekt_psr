@@ -7,11 +7,31 @@ using System.Threading.Tasks;
 
 namespace Cloud
 {
+    /**
+     * <summary>
+     * Klasa odpowiedzialna za dekodowanie zapytań przychodzących do serwera.
+     * Każde zapytanie jest typu klasy <c>Request</c>, szczegóły zapytania
+     * zawarte są w zagnieżdżonym obiekcie wewnątrz zapytania.
+     * 
+     * Każda metoda w klasie obłsugującej zapytanie, powinna nazywać się
+     * <c>Exec</c>, nie jest to wymagane przez żadną abstrakcję obiektową,
+     * ale taką przyjeliśmy nomenklaturę.
+     * 
+     * Zapytania obsługiwane są przy pomocy metody <c>Handle</c>
+     * </summary>
+     */
     internal class RequestHandler
     {
-        public static Response Handle (Request request)
+
+        /**
+         * Metoda obłsugująca konkretne zapytanie, jako parametry przyjmuje:
+         * <param name="request">Obiekt zapytania</param>
+         * <param name="clientIp">Adres IP klienta</param>
+         * na podstawie pola <c>Request::requestType</c> przekazuje obsługę
+         * zapytania w łancuch zależności do konkretnego kontrolera.
+         */
+        public static Response Handle (Request request, string clientIp)
         {
-            Console.WriteLine("Serving request of type: " + request.requestType.ToString());
             switch (request.requestType)
             {
                 case RequestType.Test:
@@ -19,6 +39,21 @@ namespace Cloud
 
                 case RequestType.Listing:
                     return Listing.Exec(request);
+
+                case RequestType.FetchFile:
+                    return FetchFile.Exec(request);
+
+                case RequestType.UploadFile:
+                    return UploadFile.Exec(request, clientIp);
+
+                case RequestType.DelFile:
+                    return DelFile.Exec(request, clientIp);
+
+                case RequestType.RenameFile:
+                    return RenameFile.Exec(request, clientIp);
+
+                case RequestType.MkDir:
+                    return MkDir.Exec(request);
             }
 
             return null;

@@ -1,0 +1,9 @@
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\bin\Debug\ArchExplorer.exe
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\bin\Debug\ArchExplorer.pdb
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.csproj.AssemblyReference.cache
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.Properties.Resources.resources
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.csproj.GenerateResource.cache
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.csproj.CoreCompileInputs.cache
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.exe
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.pdb
+C:\Users\marty\Desktop\PSR\CLOUD\Cloud\ArchExplorer\obj\Debug\ArchExplorer.Form1.resources
